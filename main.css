@@ -1,0 +1,127 @@
+html {
+    font-family: 'Lato', sans-serif;
+    background: url(cassette.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow:hidden;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);    
+}
+
+/* Animations */
+.canimate.ng-enter, .canimate.ng-leave{
+    -webkit-transition: 475ms linear all;
+    -moz-transition: 475ms linear all;
+    -ms-transition: 475ms linear all;
+    -o-transition: 475ms linear all;
+    transition: 475ms linear all;
+    opacity:0;
+}
+
+.canimate.ng-enter {
+    opacity:0;
+}
+
+.canimate.ng-enter.ng-enter-active {
+    opacity:1;
+}
+
+.canimate.ng-leave {
+    opacity:0;
+}
+.canimate.ng-leave.ng-leave-active {
+    opacity:0;
+}
+
+.showanimate{
+    text-align:center;
+    opacity:1;
+    -webkit-transition:all linear0.3s;
+    -moz-transition:all linear 0.3s;
+    -o-transition:all linear 0.3s;
+    transition:all linear 0.3s;   
+}
+
+.showanimate.ng-hide {
+    opacity:0       
+}
+
+
+.nav {
+    list-style: none;
+}
+
+.nav-item {    
+    text-decoration:none;
+}
+
+.nav-item:hover{
+    opacity: 0.5;
+}
+
+.sidebar {
+    float:right;
+    width: 200px;   
+}
+
+.title-bar{
+    text-align:right;
+    
+}
+
+.content {
+    width:50%;
+    margin: 0 auto;
+}
+
+.aboutImg {
+    display:block;
+    border: 3px solid;
+    border-color: rgba(0,0,0,0.7);
+    margin: 0 auto;
+    
+}
+
+a {
+    text-decoration: none;
+    color:#0000EE;
+    opacity: 1;
+    transition: opacity .1s ease-in-out;
+    -moz-transition: opacity .1s ease-in-out;
+    -webkit-transition: opacity .1s ease-in-out;
+}
+
+a:link{
+   color:#0000EE;
+}
+
+
+a:hover{
+    opacity:0.5; 
+    text-decoration:overline;
+    font-size:150%;
+}
+
+a:visited{
+    color:blue;
+}
+
+.name-link:active{
+    font-size:100%;
+    
+}
+
+.info {
+    color:white;
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.7);
+    
+
+}

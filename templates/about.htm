@@ -1,0 +1,18 @@
+<div ng-controller="AboutCtrl">
+    <p><i>The Easy Listening Hour</i> is two people: <i><a class='name-link' href ng-click='changePerson("Davis")'>Davis</a></i> and <i><a class='name-link' href ng-click='changePerson("Daniel")'>Daniel</a></i>
+    </p>
+    <hr>
+    <div ng-show="personSelected" class='showanimate'>
+        <img class='aboutImg' src="{{activePerson.image}}">
+        <div class='info'>
+            <h3 >This is {{activePerson.name}}</h3>
+            <span>{{activePerson.information}}</span>
+        
+                       
+            <h3>Follow {{activePerson.name}} on stuff</h3>
+            <div ng-repeat='media in activePerson.social'>
+                <a href='{{media.url}}' target='_blank'>{{media.name}}</a>
+            </div>   
+        </div>
+    </div>    
+</div>
