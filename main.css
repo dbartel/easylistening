@@ -6,6 +6,16 @@ html {
     -o-background-size: cover;
     background-size: cover;
     overflow:hidden;
+    color:white;
+}
+
+.overlay {
+    position:fixed;
+    background-color: rgba(0,0,0,0.1);
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
 }
 
 hr {
@@ -58,13 +68,7 @@ hr {
     list-style: none;
 }
 
-.nav-item {    
-    text-decoration:none;
-}
 
-.nav-item:hover{
-    opacity: 0.5;
-}
 
 .sidebar {
     float:right;
@@ -91,7 +95,7 @@ hr {
 
 a {
     text-decoration: none;
-    color:#0000EE;
+    color:rgb(243,54,79);
     opacity: 1;
     transition: opacity .1s ease-in-out;
     -moz-transition: opacity .1s ease-in-out;
@@ -99,7 +103,7 @@ a {
 }
 
 a:link{
-   color:#0000EE;
+    color:rgb(243,54,79);
 }
 
 
@@ -110,12 +114,11 @@ a:hover{
 }
 
 a:visited{
-    color:blue;
+    color:rgb(243,54,79);
 }
 
 .name-link:active{
-    font-size:100%;
-    
+    font-size:100%;  
 }
 
 .info {
