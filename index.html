@@ -14,17 +14,17 @@
     <script type='text/javascript' src='scrpt.js'></script>
   </head>
   <body ng-controller='MainCtrl'>
-      <div class='overlay'>
-    <h2 class='title-bar'>The Easy Listening Hour</h2>
-    <div class='sidebar'>      
-      <ul class='nav'>
-          <li><a class='nav-item' href ng-click='changeActive("Home")'>Home</a></li>
-          <li><a class='nav-item' href ng-click='changeActive("About")'>About</a></li>
-      </ul>
+    <div class='overlay'>
+        <h2 class='title-bar'>The Easy Listening Hour</h2>
+        <div class='sidebar'>      
+          <ul class='nav'>
+              <li><a class='nav-item' href ng-click='changeActive("Home")'>Home</a></li>
+              <li><a class='nav-item' href ng-click='changeActive("About")'>About</a></li>
+          </ul>
+        </div>
+        <div class='content'>
+            <div class='canimate' ng-include='activePage.url'></div>
+        </div>
     </div>
-      <div class='content'>
-          <div class='canimate' ng-include='activePage.url'></div>
-      </div>
-      </div>
   </body>
 </html>
