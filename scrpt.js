@@ -1,19 +1,32 @@
 var easyListeningApp = angular.module('easyListeningApp', ['ngAnimate']);
 
-easyListeningApp.controller("MainCtrl", ["$scope", function($scope) {
-    
+easyListeningApp.controller("MainCtrl", ["$scope", "$location", function($scope, $location) {
+        
     $scope.templates = [
         { name: "Home", url: "templates/home.htm"},
         { name: "About", url: "templates/about.htm"},
     ];
-       
-    $scope.activePage = $scope.templates[0];
-    
+           
     $scope.changeActive = function(name) {
         $scope.activePage = _.find($scope.templates, function(t) {
             return t.name == name;
         });
     };
+    
+    $scope.parseUrl = function() {
+        switch ($location.path()) {
+                case "/about":
+                    $scope.changeActive("About");
+                    break;
+                case "/home": 
+                    $scope.changeActive("Home");
+                    break;  
+                default:
+                    $scope.changeActive("Home");
+        }
+    }
+    $scope.parseUrl();    
+    
 
 }]);
 
