@@ -29,6 +29,10 @@ html {
     margin: 0 auto;
 }
 
+.title-bar{
+    text-align:right;
+}
+
 /* LAYOUT */
 
 /* MEDIA */
@@ -37,6 +41,10 @@ html {
     .content {
         float:none;
         width:auto;
+    }
+    
+    .title-bar {
+        text-align:center;
     }
     
 }
@@ -98,10 +106,7 @@ hr {
 
 
 
-.title-bar{
-    text-align:right;
-    
-}
+
 
 .aboutImg {
     display:block;
