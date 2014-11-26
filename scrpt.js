@@ -34,7 +34,7 @@ easyListeningApp.controller("HomeCtrl", ["$scope", function($scope) {
     
     //Set playing status
     var d = new Date();    
-    if (d.getDay() == 6 && d.getUTCHours() == 18) {
+    if (d.getDay() == 3 && d.getUTCHours() == 18) {
         $scope.showStatus = "maybe live right now";
     }
     else {
