@@ -6,16 +6,52 @@ html {
     -o-background-size: cover;
     background-size: cover;
     overflow:hidden;
+    color:white;
 }
 
-hr {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);    
+/* LAYOUT */
+.overlay {
+    position:fixed;
+    background-color: rgba(0,0,0,0.1);
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
 }
 
-/* Animations */
+.sidebar {
+    float:right;
+    width: 200px;   
+}
+
+.content {
+    width:50%;
+    margin: 0 auto;
+}
+
+.title-bar{
+    text-align:right;
+}
+
+/* LAYOUT */
+
+/* MEDIA */
+@media screen and (max-width: 480px) {
+    .sidebar,
+    .content {
+        float:none;
+        width:auto;
+    }
+    
+    .title-bar {
+        text-align:center;
+    }
+    
+}
+/* MEDIA */
+
+
+/* ANIMATIONS */
 .canimate.ng-enter, .canimate.ng-leave{
     -webkit-transition: 475ms linear all;
     -moz-transition: 475ms linear all;
@@ -53,33 +89,24 @@ hr {
     opacity:0       
 }
 
+/* ANIMATIONS */
 
+
+/* MISC STYLING */
 .nav {
     list-style: none;
 }
 
-.nav-item {    
-    text-decoration:none;
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);    
 }
 
-.nav-item:hover{
-    opacity: 0.5;
-}
 
-.sidebar {
-    float:right;
-    width: 200px;   
-}
 
-.title-bar{
-    text-align:right;
-    
-}
 
-.content {
-    width:50%;
-    margin: 0 auto;
-}
 
 .aboutImg {
     display:block;
@@ -91,7 +118,7 @@ hr {
 
 a {
     text-decoration: none;
-    color:#0000EE;
+    color:rgb(243,54,79);
     opacity: 1;
     transition: opacity .1s ease-in-out;
     -moz-transition: opacity .1s ease-in-out;
@@ -99,7 +126,7 @@ a {
 }
 
 a:link{
-   color:#0000EE;
+    color:rgb(243,54,79);
 }
 
 
@@ -110,18 +137,23 @@ a:hover{
 }
 
 a:visited{
-    color:blue;
+    color:rgb(243,54,79);
 }
 
 .name-link:active{
-    font-size:100%;
-    
+    font-size:100%;  
 }
 
 .info {
     color:white;
     background: rgb(0,0,0);
-    background: rgba(0,0,0,0.7);
-    
-
+    background: rgba(0,0,0,0.7);   
 }
+
+.audio-block {
+    margin:0 auto;
+    text-align:center;
+    width:50%;
+}
+
+/* MISC STYLING */
