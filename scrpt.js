@@ -1,4 +1,9 @@
-var easyListeningApp = angular.module('easyListeningApp', ['ngAnimate']);
+var easyListeningApp = angular.module('easyListeningApp', ['ngAnimate'])
+    .config(function($sceProvider) {
+        $sceProvider.enabled(false);
+    });
+
+
 
 easyListeningApp.controller("MainCtrl", ["$scope", "$location", function($scope, $location) {
         
@@ -31,7 +36,6 @@ easyListeningApp.controller("MainCtrl", ["$scope", "$location", function($scope,
 }]);
 
 easyListeningApp.controller("HomeCtrl", ["$scope", function($scope) {
-    
     //Set playing status
     var d = new Date();    
     if (d.getDay() == 3 && d.getUTCHours() == 18) {
