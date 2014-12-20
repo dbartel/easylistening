@@ -8,8 +8,9 @@ var easyListeningApp = angular.module('easyListeningApp', ['ngAnimate'])
 easyListeningApp.controller("MainCtrl", ["$scope", "$location", function($scope, $location) {
         
     $scope.templates = [
-        { name: "Home", url: "templates/home.htm"},
-        { name: "About", url: "templates/about.htm"},
+        { name: "Home",    url: "templates/home.htm" },
+        { name: "About",   url: "templates/about.htm" },
+        { name: "Archive", url: "templates/archive.htm" }
     ];
            
     $scope.changeActive = function(name) {
@@ -46,12 +47,11 @@ easyListeningApp.controller("HomeCtrl", ["$scope", function($scope) {
     }
     
     $scope.lastShow = {
-        name: "Davis and Daniel present: An Easy Listening Christmas",
-        src: "https://dl.dropboxusercontent.com/u/6447183/last.wav"
+        name: "Studying music to help you study",
+        src: "https://db.tt/vsW4gd9G"
     };
     
-            
-            
+        
     
             
 }]);
@@ -62,7 +62,7 @@ easyListeningApp.controller("AboutCtrl", ["$scope", "$timeout", function($scope,
     
     $scope.daniel = {
         name: "Daniel",
-        information: "Daniel is a sometimes bored person whose hobbies include having dysfunctional conversations with one to two people, walking until he's lost, and not knowing what's going on.",
+        information: "Daniel hasn't done much of anything.",
         image: "img/IMG_0300.JPG",
         social: [
             {
@@ -110,3 +110,28 @@ easyListeningApp.controller("AboutCtrl", ["$scope", "$timeout", function($scope,
     $scope.activePerson = $scope.daniel;
     
 }]);
+    
+easyListeningApp.controller("ArchiveCtrl", ["$scope", "$location", function($scope, $location) {
+    $scope.archives = [
+        {
+            pic:"http://i.imgur.com/3101tp3.jpg",
+            title: "Loop the radio!",
+            audioSrc:"https://db.tt/gDAVXKEn"
+        },
+        {
+            pic:"http://i.imgur.com/COLZFQP.jpg",
+            title: "Davis and Daniel present: An Easy Listening Christmas",
+            audioSrc:"https://db.tt/rofhlIuV"
+        },
+        {
+            pic:"http://i.imgur.com/7mco7bD.jpg",
+            title: "Studying music to help you study",
+            audioSrc:"https://db.tt/vsW4gd9G"
+        }
+    ];
+    
+
+    
+    
+}]);
+    
