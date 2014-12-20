@@ -1,0 +1,11 @@
+<div ng-controller="ArchiveCtrl">
+    <h4>Click a picture to listen to that show</h4>
+    <div>
+        <div class='archive' ng-repeat="archive in archives">
+            <a href="{{archive.audioSrc}}" target="_blank">
+                <img src="{{archive.pic}}">
+                <span>{{archive.title}}</span>
+            </a>
+        </div>
+    </div>
+</div>
