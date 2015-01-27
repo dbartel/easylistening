@@ -16,15 +16,17 @@
   <body ng-controller='MainCtrl'>
     <div class='overlay'>
         <h2 class='title-bar'>The Easy Listening Hour</h2>
-        <div class='sidebar'>      
-          <ul class='nav'>
-              <li><a class='nav-item' href ng-click='changeActive("Home")'>Home</a></li>
-              <li><a class='nav-item' href ng-click='changeActive("About")'>About</a></li>
-              <li><a class='nav-item' href ng-click='changeActive("Archive")'>Old Shows</a></li>
-          </ul>
-        </div>
         <div class='content'>
-            <div class='canimate' ng-include='activePage.url'></div>
+            <p>Hi, welcome to The Easy Listening Hour, an hour of sounds picked just for you.</p>
+            <p>Listen in at <a href='http://kanm.org/' target="_blank">KANM</a> on Tuesday's from 1 to 2pm. </p>
+            <div>
+                <div class='archive' ng-repeat="archive in archives">
+                    <a href="{{archive.audioSrc}}" target="_blank">
+                        <img src="{{archive.pic}}">
+                        <span>{{archive.title}}</span>
+                    </a>
+                </div>
+            </div>                
         </div>
     </div>
   </body>
