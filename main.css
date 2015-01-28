@@ -9,6 +9,9 @@ html {
     color:white;
 }
 
+
+
+
 /* LAYOUT */
 .overlay {
     position:fixed;
@@ -45,6 +48,10 @@ html {
     
     .title-bar {
         text-align:center;
+    }
+    
+    .archive {
+        display:block;
     }
     
 }
