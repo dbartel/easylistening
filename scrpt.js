@@ -1,20 +1,8 @@
-var easyListeningApp = angular.module('easyListeningApp', ['ngAnimate'])
-    .config(function($sceProvider) {
-        $sceProvider.enabled(false);
-    });
-
+var easyListeningApp = angular.module('easyListeningApp', []);
 
 
 easyListeningApp.controller("MainCtrl", ["$scope", "$location", function($scope, $location) {
-        
-    $scope.templates = [
-        { name: "Home",    url: "templates/home.htm" },
-        { name: "About",   url: "templates/about.htm" },
-        { name: "Archive", url: "templates/archive.htm" }
-    ];
-           
 
-    
     $scope.archives = [
         {
             pic:"http://i.imgur.com/Dc14jWG.jpg",
@@ -39,9 +27,16 @@ easyListeningApp.controller("MainCtrl", ["$scope", "$location", function($scope,
         }
 
     ];    
+    
 
     
 
 }]);
 
+$("window").ready(function() {
+        $('.img-wrapper').find("img").each(function(){
+        var imgClass = (this.width / this.height > 1) ? 'wide' : 'tall';
+        $(this).addClass(imgClass);
+    });
+});
     

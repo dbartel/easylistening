@@ -9,7 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='main.css' rel='stylesheet'>  
     <script type='text/javascript' src='lib/angular.min.js'></script>
-    <script type='text/javascript' src='lib/angular-animate.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script type='text/javascript' src='lib/lodash.min.js'></script>
     <script type='text/javascript' src='scrpt.js'></script>
   </head>
@@ -24,7 +24,9 @@
                 <small>(click one to listen)</small><br>
                 <div class='archive' ng-repeat="archive in archives">
                     <a href="{{archive.audioSrc}}" target="_blank">
-                        <img src="{{archive.pic}}">
+                        <div class="img-wrapper">
+                            <img src="{{archive.pic}}">
+                        </div>
                         <span>{{archive.title}}</span>
                     </a>
                 </div>
